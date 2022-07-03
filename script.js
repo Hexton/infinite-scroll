@@ -48,13 +48,13 @@ function displayPhotos() {
     });
     // Event Listener, check when each is finished loading
     img.addEventListener('load', imageLoaded);
-    // Put <img> inside <a>, then put both inside imageContainer Element
+    // Put <img> inside <a>, then put both inside imageContainer
     item.appendChild(img);
     imageContainer.appendChild(item);
   });
 }
 
-// Get photos from Unsplash API
+// Fetch photos from Unsplash API
 async function getPhotos() {
   try {
     const response = await fetch(apiUrl);
